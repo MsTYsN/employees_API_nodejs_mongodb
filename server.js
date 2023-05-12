@@ -1,6 +1,6 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import employeeRouter from './routers/employeeRouter.js';
+const express = require('express');
+const mongoose = require('mongoose');
+const employeeRouter = require('./routers/employeeRouter.js');
 
 mongoose
   .connect('mongodb://localhost/companydb')
@@ -24,4 +24,4 @@ app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
 });
 
-export default app;
+module.exports = app;

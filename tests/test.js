@@ -1,17 +1,14 @@
-import app from '../server.js';
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-
+const server = require('../server');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
 const should = chai.should();
 
 chai.use(chaiHttp);
 
-const reqServer = app;
-
 describe('Basic routes tests', function () {
   it('GET to /api/employee should return 200', function (done) {
     chai
-      .request(reqServer)
+      .request(server)
       .get('/api/employee')
       .end(function (err, res) {
         res.should.have.status(200);
@@ -21,7 +18,7 @@ describe('Basic routes tests', function () {
 
   it('POST to /api/employee should return 200', function (done) {
     chai
-      .request(reqServer)
+      .request(server)
       .get('/api/employee')
       .end(function (err, res) {
         res.should.have.status(200);

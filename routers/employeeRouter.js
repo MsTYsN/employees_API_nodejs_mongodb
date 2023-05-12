@@ -1,5 +1,5 @@
-import express from 'express';
-import Employee from '../models/employeeModel.js';
+const express = require('express');
+const Employee = require('../models/employeeModel.js');
 
 const employeeRouter = express.Router();
 
@@ -17,4 +17,4 @@ employeeRouter.get('', async (req, res) => {
   res.send(employees);
 });
 
-export default employeeRouter;
+module.exports = employeeRouter;
