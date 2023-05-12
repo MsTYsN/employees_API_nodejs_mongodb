@@ -1,31 +1,31 @@
-var server   = require('../server'),
-    chai     = require('chai'),
-    chaiHTTP = require('chai-http'),
-    should   = chai.should();
+import app from '../server.js';
+import chai from 'chai';
+import chaiHttp from 'chai-http';
 
-chai.use(chaiHTTP);
+const should = chai.should();
 
-reqServer = process.env.HTTP_TEST_SERVER || server
+chai.use(chaiHttp);
 
-describe('Basic routes tests', function() {
+const reqServer = app;
 
-    it('GET to /api/employee should return 200', function(done){
-        chai.request(reqServer)
-        .get('/api/employee')
-        .end(function(err, res) {
-            res.should.have.status(200);
-            done();
-        })
+describe('Basic routes tests', function () {
+  it('GET to /api/employee should return 200', function (done) {
+    chai
+      .request(reqServer)
+      .get('/api/employee')
+      .end(function (err, res) {
+        res.should.have.status(200);
+        done();
+      });
+  });
 
-    })
-
-    it('POST to /api/employee should return 200', function(done){
-        chai.request(reqServer)
-        .get('/api/employee')
-        .end(function(err, res) {
-            res.should.have.status(200);
-            done();
-        })
-
-    })
-})
+  it('POST to /api/employee should return 200', function (done) {
+    chai
+      .request(reqServer)
+      .get('/api/employee')
+      .end(function (err, res) {
+        res.should.have.status(200);
+        done();
+      });
+  });
+});
