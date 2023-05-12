@@ -1,11 +1,12 @@
 {
   "name": "nodejs-mongo",
+  "type": "commonjs",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha --timeout 5000 tests/test.js"
+    "test": "mocha tests/test.js"
   },
   "author": "",
   "license": "ISC",
