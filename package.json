@@ -1,20 +1,19 @@
 {
   "name": "nodejs-mongo",
-  "type": "commonjs",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha tests/test.js"
+    "test": "mocha --timeout 5000 tests/test.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.3.7",
-    "chai-http": "^4.3.0",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
     "express": "^4.18.2",
-    "mocha": "^8.4.0",
+    "mocha": "^2.4.5",
     "mongoose": "^7.1.1"
   }
 }
