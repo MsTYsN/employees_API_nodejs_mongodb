@@ -14,10 +14,11 @@
     "chai-http": "^2.0.1",
     "express": "^4.18.2",
     "mocha": "^2.4.5",
+    "mongodb": "^5.5.0",
     "mongoose": "^7.1.1"
   },
   "engines": {
-    "node": "10.12.0",
+    "node": "*",
     "npm": "*"
   }
 }
